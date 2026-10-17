@@ -2,7 +2,9 @@
 
 A puzzle game for iPhone. **Coming to the App Store. Chapter 1 is free.**
 
-A lock-keeper in a yellow oilskin works the brick sluices of a tidal estuary. The canal is still enough to be a mirror, and the image below the waterline is a second set of paths. Turn the wheels, sink through the surface at a still stone, and walk under the bridges to reach the bell.
+Fifteen calm locks. Two to five minutes each. No way to lose.
+
+A lock-keeper in a yellow oilskin works the brick sluices of a tidal estuary. The canal is still enough to be a mirror, and the world below the waterline is a second set of paths: sink through at a still stone and walk under the bridges to the bell.
 
 ## Three chapters, fifteen locks
 

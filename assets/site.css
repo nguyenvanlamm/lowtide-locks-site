@@ -17,7 +17,13 @@ body { margin: 0; background: var(--stone); color: var(--ink); font: 18px/1.6 va
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--brick); text-underline-offset: 3px; }
 a:hover { color: var(--ink); }
-:focus-visible { outline: 3px solid var(--keeper); outline-offset: 2px; }
+/* Focus ring: brick on the cream stone (6.3:1), keeper yellow on slate and water (5.4:1 or more). */
+:focus-visible { outline: 3px solid var(--brick); outline-offset: 2px; }
+header.site :focus-visible, .hero :focus-visible, .dark :focus-visible, footer.site :focus-visible, .skip:focus-visible { outline-color: var(--keeper); }
+
+/* Skip link: hidden above the header until it takes keyboard focus. */
+.skip { position: absolute; left: 12px; top: 8px; z-index: 10; padding: 10px 16px; border-radius: 10px; background: var(--slate-900); color: var(--stone); font: 700 16px/1.5 var(--body); text-decoration: none; transform: translateY(-200%); }
+.skip:focus { transform: none; color: var(--stone); }
 
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 .prose { max-width: 660px; margin: 0 auto; padding: 0 20px; }
@@ -26,19 +32,23 @@ a:hover { color: var(--ink); }
 .bank { height: 18px; background: repeating-linear-gradient(90deg, transparent 0 17px, rgba(0,0,0,.18) 17px 18px), var(--brick); border-bottom: 3px solid var(--stone-2); }
 
 header.site { background: var(--slate); color: var(--mist); }
-header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+header.site .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 16px; padding-top: 8px; padding-bottom: 8px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--stone); text-decoration: none; font: 700 22px/1 var(--sign); letter-spacing: .01em; white-space: nowrap; }
 .brand img { width: 32px; height: 32px; border-radius: 7px; }
 nav.site { display: flex; gap: 18px; font-size: 16px; }
-nav.site a { color: var(--mist); text-decoration: none; }
+/* Links keep their text size; vertical padding gives a 44 px tap target. */
+nav.site a { display: inline-block; padding: 10px 0; color: var(--mist); text-decoration: none; }
 nav.site a:hover, nav.site a[aria-current] { color: var(--brass); }
+nav.site a[aria-current] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
 /* Hero: above water on top, its darker image below the waterline. */
 .hero { background: linear-gradient(var(--water) 0 62%, #30454F 62% 100%); color: var(--stone); padding: 56px 0 64px; }
 .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-.plaque { display: inline-block; border: 2px solid var(--brass); border-radius: 10px; padding: 4px 12px; color: var(--brass); font: 700 15px/1.4 var(--sign); letter-spacing: .06em; text-transform: uppercase; background: rgba(16,26,33,.35); }
+.plaque { display: inline-block; border: 2px solid var(--brass); border-radius: 10px; padding: 4px 12px; color: var(--brass); font: 700 15px/1.4 var(--sign); letter-spacing: .06em; text-transform: uppercase; background: rgba(16,26,33,.55); }
 .hero h1 { font: 700 clamp(44px, 7vw, 76px)/1 var(--sign); margin: 18px 0 6px; }
-.hero .tagline { font: 700 clamp(22px, 3vw, 30px)/1.25 var(--sign); color: var(--brass); margin: 0 0 18px; }
+.hero .tagline { font: 700 clamp(22px, 3vw, 30px)/1.25 var(--sign); color: var(--brass); margin: 0 0 12px; }
+/* The share card's fact line, in keeper yellow (5.4:1 on the water). */
+.hero .fact-line { font: 700 18px/1.45 var(--body); color: var(--keeper); margin: 0 0 18px; }
 .hero p.lede { font-size: 19px; max-width: 34em; color: var(--mist); margin: 0 0 26px; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 12px; background: var(--brass); color: var(--ink); border: 2px solid var(--brass-dark); font: 700 18px/1 var(--sign); text-decoration: none; }
@@ -69,9 +79,9 @@ section.band.dark .intro { color: var(--mist); }
 .faq dt { font: 700 22px/1.3 var(--sign); margin: 26px 0 6px; }
 .faq dd { margin: 0; color: var(--muted); }
 
-footer.site { background: var(--slate-900); color: var(--mist); font-size: 15px; padding: 28px 0 36px; }
-footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-footer.site a { color: var(--mist); }
+footer.site { background: var(--slate-900); color: var(--mist); font-size: 15px; padding: 18px 0 26px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 12px; }
+footer.site a { display: inline-block; padding: 10px 0; color: var(--mist); }
 
 /* Plain pages: privacy and support. */
 .page { padding: 48px 0 72px; }
@@ -85,9 +95,10 @@ footer.site a { color: var(--mist); }
   .hero .wrap, .chapters { grid-template-columns: 1fr; }
   .phone { width: min(260px, 72vw); }
   .chapters { gap: 40px; }
-  .chapter figure { max-width: 320px; }
+  .chapter figure { max-width: 260px; }
   .facts { grid-template-columns: 1fr; }
-  nav.site { gap: 12px; font-size: 15px; }
+  header.site .wrap { column-gap: 12px; }
+  nav.site { gap: 10px; font-size: 15px; }
   .brand { font-size: 19px; }
   .brand img { width: 28px; height: 28px; }
 }

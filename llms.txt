@@ -1,0 +1,19 @@
+# Lowtide Locks
+
+> Lowtide Locks is a calm isometric puzzle game for iPhone (iOS 15 or later, played in portrait). A lock-keeper in a yellow oilskin works the brick sluices of a tidal estuary. The canal is still enough to be a mirror, and the world below the waterline is a second set of paths: turn the wheels, sink through the surface at a still stone, and walk under the bridges to reach the bell. Coming to the App Store.
+
+- Fifteen locks in three chapters, each adding one mechanism. Chapter 1, The Shallows (free): tap to walk, turn brass wheels until two paths meet where your eye says they do, and sink below the waterline at a still stone. Chapter 2, The Locks: lifts, sliding bridges, and mirror stones that exist only below the waterline. Chapter 3, The Sluices: raise or lower the water; the mirror moves with it and the way to the bell changes.
+- A lock takes two to five minutes, and each has a par: the fewest moves that open it. Undo and Restart are free; there is no way to lose a lock.
+- Hint marks where to stand and names the next move, worked out by a solver on the phone. You start with 3 hints and earn more by opening locks in chapters 2 and 3 and by reaching par.
+- Chapter 1 is free. The Full Estuary ($3.99, one-time) opens chapters 2 and 3 and restores on a new iPhone with the same Apple account (Settings → Restore Purchases). 10 Hints cost $0.99; hint packs are optional and are not restored.
+- No ads, no tracking, no account. Progress stays on the iPhone, is not synced between devices, and the game plays offline. Large, readable type throughout. The game is in English.
+
+## Pages
+
+- [Home](https://nguyenvanlamm.github.io/lowtide-locks-site/index.html.md): what the game is, the three chapters, what you get, and questions
+- [Support](https://nguyenvanlamm.github.io/lowtide-locks-site/support.html.md): contact, how to play, purchases and restoring them, and progress
+- [Privacy Policy](https://nguyenvanlamm.github.io/lowtide-locks-site/privacy.html.md): what the game stores on the iPhone and what it never collects
+
+## Optional
+
+- [Website](https://nguyenvanlamm.github.io/lowtide-locks-site/): the HTML landing page

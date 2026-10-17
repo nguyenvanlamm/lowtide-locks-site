@@ -1,7 +1,7 @@
 # lowtide-locks-site
 
 Landing page, support and privacy pages for **Lowtide Locks**, a calm isometric puzzle game for iPhone
-where the still water is a mirror and the reflection is a second path.
+where the still water is a mirror and the world below the waterline is a second path.
 
 Live: https://nguyenvanlamm.github.io/lowtide-locks-site/ · [support](https://nguyenvanlamm.github.io/lowtide-locks-site/support.html) · [privacy](https://nguyenvanlamm.github.io/lowtide-locks-site/privacy.html)
 
